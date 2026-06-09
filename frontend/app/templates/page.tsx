@@ -17,9 +17,9 @@ export default function TemplatesPage() {
   const router    = useRouter();
   const addResume = useLocalResumeStore((s) => s.addResume);
 
-  const handleUse = (templateId: number) => {
+  const handleUse = async (templateId: number) => {
     const tpl    = TEMPLATES.find((t) => t.id === templateId)!;
-    const resume = addResume(`${tpl.name} Resume`, templateId);
+    const resume = await addResume(`${tpl.name} Resume`, templateId);
     router.push(`/editor/${resume.id}`);
   };
 

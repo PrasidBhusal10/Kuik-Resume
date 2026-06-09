@@ -307,13 +307,13 @@ function SuggestionCard({
           <div>
             <p className="text-xs font-medium text-neutral-900/40 mb-1">Before</p>
             <pre className="text-xs text-neutral-900/60 whitespace-pre-wrap bg-neutral-50 rounded-lg p-2 max-h-40 overflow-y-auto">
-              {suggestion.original}
+              {JSON.stringify(suggestion.original, null, 2)}
             </pre>
           </div>
           <div>
             <p className="text-xs font-medium text-emerald-600 mb-1">After</p>
             <pre className="text-xs text-neutral-900/80 whitespace-pre-wrap bg-emerald-50 rounded-lg p-2 max-h-40 overflow-y-auto">
-              {suggestion.suggested}
+              {JSON.stringify(suggestion.suggested, null, 2)}
             </pre>
           </div>
         </div>
